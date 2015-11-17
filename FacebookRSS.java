@@ -3,11 +3,27 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Scanner;
+
 
 public class FacebookRSS {
 	
 	public static void main(String[] args) {
-		System.out.println(readURL("https://www.facebook.com/feeds/notifications.php?id=660703270&viewer=660703270&key=AWgUEffmMzO-W3D7&format=rss20"));
+		System.out.println("Instructions on How to Use (please read):\n");
+		System.out.println("1. Go to https://www.facebook.com.");
+		System.out.println("2. Login to your account (if you have one).");
+		System.out.println("3. Go to https://www.facebook.com/notifications.");
+		System.out.println("4. Click on RSS in 'Get notifications via'.");
+		System.out.println("5. Copy the URL link.");
+		System.out.println("6. Paste the URL link here and get your notifications!");
+		
+		System.out.print("Please enter your RSS URL: ");
+		Scanner keybd = new Scanner(System.in);
+		String URL = keybd.next();
+		
+		System.out.println();
+		System.out.println("Please wait while we process your notifications ...\n");
+		System.out.println(readURL(URL));
 	}
 	
 	public static String readURL(String address) {
