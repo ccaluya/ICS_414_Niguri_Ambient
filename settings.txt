@@ -1,8 +1,0 @@
-Set RSS Feed = None
-Update Hours = 0
-Update Minutes = 0
-Update Seconds = 0
-Max Notifications = 1
-Last Update At = None
-Last RSS Post= None
-Update Interval (Milliseconds) = 0
