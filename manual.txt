@@ -1,0 +1,40 @@
+General Notes
+---------------
+. app.exe - This is what you will click on to launch the code like a desktop application 
+  - it is possible to change the icon by swapping the images in the data->content->icon folder and then, adjusting the app.js file
+
+. backup1.txt, backup2.txt, operation-backup3.txt, test.txt - These are text files that I backed up code ideas that were working before.  They are NOT essential to run the program
+
+. settings.txt - VERY IMPORTANT!  This .txt file is used to store saved settings and is used EVERY time the program starts up to load the last setting adjustments that the user made.  Ex. If the user sets the program to receive at max 10 notifications per update, saves, closes program, and then, reopens the program later; the application should STILL be set to receive at max 10 notifications.
+
+In .idea folder
+======================
+~ General files to program code in Intellij IDE and isn't essential to run
+
+In data folder
+======================
+. app.js - VERY IMPORTANT! This js file is responsible in rendering the program in a desktop application.  
+
+In bin folder
+=======================
+. node.exe - This entire package utilizes nodejs to run itself
+
+In content folder
+=======================
+. index.html - VERY IMPORTANT! This is the file that the app.js file will run and display in the desktop application
+
+. style.css - VERY IMPORTANT! This is the css file that styles the appearance of the program 
+
+-> In icons folder
+--------------------
+~ These are the images for the application icon and can be changed to a different image, BUT adjustments MUST be made in the app.js file
+
+-> In images folder
+---------------------
+~ These are images that are used in the operation.js and index.html files to be used for the ambient aspect of alerting a user of a notification.  Recommend using .gif file WHEN a notification occurs and NOT when there are no notifications pending
+
+-> In js folder
+----------------------
+. operation.js - VERY IMPORTANT! This is the js file that handles the operations within the index.html file like changing settings, showing the images when a notification comes in, calculating the update times, etc.
+
+

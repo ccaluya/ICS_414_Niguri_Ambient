@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Niguri RSS Tracker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Google Feed API -->
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!-- Javascript For This Project -->
+  <script type="text/javascript" src="js/operation.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <center>
+        <h1>The Wonderful Social Media Notifier!</h1>
+      </center>
+    </div>
+    <div class="row">
+      <form id="rssLoader" name="rssLoader" action="" method="get">
+        <h2>Set Me Up!</h2>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="settingOp">
+              Enter RSS Feed Url to Track:
+              <input type="text" id="rssUrl" name="rssUrl">
+              <br>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            Update Frequency:<br>
+            Hours (0-23):
+            <input type="number" name="updateHours" min="0" max="23" value="0" onkeydown="return false">
+            Minutes (0-59):
+            <input type="number" name="updateMinutes" min="0" max="59" value="0" onkeydown="return false">
+            Seconds (1-59):
+            <input type="number" name="updateSeconds" min="1" max="59" value="10" onkeydown="return false">
+            <br>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            Max Notifications (1-100):
+            <input type="number" name="updateHours" min="1" max="100" value="1" onkeydown="return false">
+            <br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p id="currentRSS" name="currentRSS">Current RSS Feed: </p>
+            <br>
+          </div>
+        </div>
+        <input type="button" id="rssSubmit" name="rssSubmit" value="Save/Start" onclick="launch(this.form)">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
