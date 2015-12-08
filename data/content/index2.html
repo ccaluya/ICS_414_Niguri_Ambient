@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <style>
+        table {
+            width: 100%;
+        }
+
+        div {
+            width: 250px;
+        }
+    input{
+    width:100%;
+    display:inline-block;
+    position:relative;
+
+    }
+
+    button{
+    width: 100%;
+
+    }
+
+    p{
+    vertical-align: middle;
+
+    }
+    </style>
+
+  <title>Niguri RSS Tracker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Google Feed API -->
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!-- Javascript For This Project -->
+  <script type="text/javascript" src="js/operation.js"></script>
+</head>
+<body>
+<div style="height:100%;overflow:auto;"><table>
+  <tr>
+    <th colspan="2"><h2><center>The Wonderful Social Media Notifier!</center></h2></th>
+  </tr>
+  <tr>
+    <td><p align="right">Enter RSS Feed URL to Track:</p></td>
+    <td><input type="text" id="rssUrl" name="rssUrl"></td>
+  </tr>
+  <tr>
+    <td colspan="2"><h4><center>Update Frequency</center></h4></td>
+  </tr>
+  <tr>
+      <br>
+  </tr>
+  <tr>
+    <td><p align="right">Hours (0-23):</p></td>
+    <td><input type="number" name="uHours" min="0" max="23" value="0" onkeydown="return false"></td>
+  </tr>
+  <tr>
+    <td><p align="right">Minutes (0-59):</p></td>
+    <td><input type="number" name="uMinutes" min="0" max="59" value="0" onkeydown="return false"></td>
+  </tr>
+  <tr>
+    <td><p align="right">Seconds (1-59):</p></td>
+    <td><input type="number" name="uSeconds" min="1" max="59" value="10" onkeydown="return false"></td>
+  </tr>
+  <tr>
+    <td><p align="right">Max Notifications<br>(1-100):</p></td>
+    <td><input type="number" name="mxnot" min="1" max="100" value="1" onkeydown="return false"></td>
+  </tr>
+  <tr>
+    <td colspan="2"><input type="button" id="save-btn" name="save-btn" value="Save" onclick="saveSettings(this.form)"></td>
+  </tr>
+  <tr>
+    <td colspan="2"><input type="button" id="start-btn" name="start-btn" value="Start" onclick="launch(this.form)"></td>
+  </tr>
+  <tr>
+    <td colspan="2"><button id="reset-btn" name="reset-btn" value="Reset" onclick="resetSettings()">Reset</button></td>
+  </tr>
+</table></div>
+</body>
+</html>
